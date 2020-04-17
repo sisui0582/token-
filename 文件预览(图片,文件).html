@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 文件预览 固定语法 给按钮一个change事件
+        $('#exampleInputFile').change(function(){
+                // 获取用户选择的图片
+                var file = this.files[0];
+                // 将文件转为src路径
+                var url = URL.createObjectURL(file);
+                // 将url 路径赋值给img 的src
+                $('.user_pic').attr('src',url);
+            });
+    </script>
+</body>
+</html>
